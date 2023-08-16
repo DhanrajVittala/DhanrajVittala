@@ -1,9 +1,24 @@
-👋 Hey there! I'm Dhanraj Vittala, a backend Java enthusiast on a mission to turn caffeine into code. ☕️
+<h1 align="center">Hi 👋, I'm DHANRAJ VITTALA</h1>
+<h3 align="center">Java Backend Developer</h3>
 
-🚀 I'm all about crafting efficient server-side solutions that make applications hum. From databases to APIs, I thrive on making things work seamlessly.
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=dhanrajvittala&label=Profile%20views&color=0e75b6&style=flat" alt="dhanrajvittala" /> </p>
 
-🌱 Currently diving into the world of microservices and Spring Boot. I believe in clean code and elegant architecture.
+<p align="left"> <a href="https://twitter.com/dhanraj_58" target="blank"><img src="https://img.shields.io/twitter/follow/dhanraj_58?logo=twitter&style=for-the-badge" alt="dhanraj_58" /></a> </p>
 
-🎮 When I'm not in front of a screen, you'll find me gaming or exploring the great outdoors.
+- 🌱 I’m currently learning **microservices and Spring Boot**
 
-💬 Let's chat Java, APIs, or anything tech – drop me a line! 📩
+- 💬 Ask me about **Java, APIs, or anything tech**
+
+- 📫 How to reach me **dhanrajvittalapoojary@gmail.com**
+
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://twitter.com/dhanraj_58" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="dhanraj_58" height="30" width="40" /></a>
+</p>
+
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> </p>
+
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=dhanrajvittala&show_icons=true&locale=en" alt="dhanrajvittala" /></p>
+
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=dhanrajvittala&" alt="dhanrajvittala" /></p>
