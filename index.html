@@ -103,7 +103,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 function renderRepos(){
  const q=repoSearch.value.trim().toLowerCase();
  const list=repositories.filter(r=>[r.name,r.description,r.language].some(v=>String(v||'').toLowerCase().includes(q)));
- repoState.textContent=list.length+' REPOSITORY'+(list.length===1?'':'IES')+' FOUND · LIVE FROM GITHUB';
+ repoState.textContent=list.length+' '+(list.length===1?'REPOSITORY':'REPOSITORIES')+' FOUND · LIVE FROM GITHUB';
  if(!list.length){repoGrid.innerHTML='<article class="card wide"><h3>No matching repositories</h3><p>Try another search, or open the complete repository list.</p><a class="btn" href="https://github.com/DhanrajVittala?tab=repositories" target="_blank" rel="noreferrer">VIEW ALL REPOSITORIES ↗</a></article>';return;}
  repoGrid.innerHTML=list.map((r,i)=>'<a class="card repo third" href="'+esc(r.html_url)+'" target="_blank" rel="noreferrer"><div class="cardlabel">LIVE REPOSITORY / '+String(i+1).padStart(2,'0')+'</div><div class="repoicon">✳</div><h3>'+esc(r.name)+'</h3><p>'+esc(r.description||'A public project by Dhanraj Vittala. Explore the source code and project details.')+'</p><div class="repo-meta">'+(r.language?'<span><i class="repo-language"></i>'+esc(r.language)+'</span>':'')+'<span>★ '+r.stargazers_count+'</span><span>⑂ '+r.forks_count+'</span></div><div class="repofoot"><span>OPEN PROJECT</span><span>↗</span></div></a>').join('');
 }
