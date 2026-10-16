@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18,24&height=230&section=header&text=Hey%20there!%20%F0%9F%91%8B&fontSize=58&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=I%20am%20DHANRAJ VITTALA%20%7C%20Professional%20Bug%20Maker&descAlignY=60&descSize=20" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18,24&height=240&section=header&text=Hey%20there!%20%F0%9F%91%8B&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=I%20am%20Dhanraj%20Vittala%20%7C%20Professional%20Bug%20Maker&descAlignY=60&descSize=20" width="100%" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fredoka&weight=700&size=26&duration=2500&pause=700&color=FF4FD8&center=true&vCenter=true&repeat=true&width=650&height=50&lines=%E2%98%95+Coffee+in%2C+code+out;%F0%9F%90%9B+99+bugs+in+the+code...+take+one+down!;%F0%9F%9A%80+Building+fun+stuff+daily;%F0%9F%8E%AE+Press+START+to+explore+my+profile" />
+<img src="https://readme-typing-svg.demolab.com?font=Fredoka&weight=700&size=26&duration=2500&pause=700&color=FF4FD8&center=true&vCenter=true&repeat=true&width=700&height=50&lines=%E2%98%95+Coffee+in%2C+code+out;%F0%9F%90%9B+99+bugs+in+the+code...+take+one+down!;%F0%9F%9A%80+Building+fun+stuff+every+day;%F0%9F%8E%AE+Press+START+to+explore+my+profile" />
 
 <br><br>
 
@@ -20,13 +20,12 @@
 
 | 🎯 Stat | 🕹️ Value |
 |---|---|
-| 🧙 Class | YOUR TITLE (Code Wizard) |
-| 📍 Spawn Point | YOUR CITY |
-| 🔭 Current Quest | YOUR PROJECT |
-| 🌱 Leveling Up | YOUR TOPIC |
+| 🧙 Class | Code Wizard in Training |
+| 📍 Spawn Point | Udupi, Karnataka, India |
+| 🔭 Current Quest | Building cool projects |
+| 🌱 Leveling Up | New skills every day |
 | ☕ Power-up | Coffee / Tea |
-| 🎵 Soundtrack | YOUR MUSIC |
-| 🤹 Side Quests | YOUR HOBBIES |
+| 🤹 Side Quests | Gaming, music, learning |
 | ⚡ Secret Power | Googling errors really fast |
 
 <br clear="right"/>
@@ -36,7 +35,7 @@
 ## 🧰 My Inventory
 
 <div align="center">
-<img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,python,html,css,tailwind,git,docker,figma,vscode&perline=13" />
+<img src="https://skillicons.dev/icons?i=js,ts,react,nodejs,python,html,css,tailwind,git,github,docker,figma,vscode&perline=13" />
 </div>
 
 ### 💪 Skill Levels
@@ -56,7 +55,7 @@
 <img height="170" src="https://github-readme-stats.vercel.app/api?username=DhanrajVittala&show_icons=true&theme=radical&hide_border=true&include_all_commits=true" />
 <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DhanrajVittala&layout=compact&theme=radical&hide_border=true" />
 <br>
-<img src="https://streak-stats.demolab.com/?user=YOUR_USERNAME&theme=radical&hide_border=true" />
+<img src="https://streak-stats.demolab.com/?user=DhanrajVittala&theme=radical&hide_border=true" />
 <br>
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=DhanrajVittala&theme=react-dark&hide_border=true&area=true&custom_title=My%20Commit%20Rollercoaster%20%F0%9F%8E%A2" width="95%" />
 </div>
@@ -100,10 +99,10 @@ Why do programmers prefer dark mode? Because light attracts bugs. 🐛
 ## 💌 Send Me a Pigeon
 
 <div align="center">
-<a href="https://linkedin.com/in/YOUR_LINK"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-<a href="https://twitter.com/YOUR_LINK"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" /></a>
-<a href="mailto:you@email.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-<a href="https://yourportfolio.com"><img src="https://img.shields.io/badge/Portfolio-ff4fd8?style=for-the-badge&logo=vercel&logoColor=white" /></a>
+<a href="https://github.com/DhanrajVittala"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+<a href="https://linkedin.com/in/YOUR_LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="https://instagram.com/YOUR_INSTAGRAM"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
+<a href="mailto:YOUR_EMAIL@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 <br><br>
 <img src="https://readme-typing-svg.demolab.com?font=Fredoka&size=18&duration=3000&pause=1000&color=00E5FF&center=true&vCenter=true&width=450&lines=Thanks+for+stopping+by!+%F0%9F%92%96;Don%27t+forget+to+smash+that+star+%E2%AD%90" />
 </div>
