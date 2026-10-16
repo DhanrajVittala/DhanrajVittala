@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18,24&height=230&section=header&text=Hey%20there!%20%F0%9F%91%8B&fontSize=58&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=I%20am%20YOUR%20NAME%20%7C%20Professional%20Bug%20Maker&descAlignY=60&descSize=20" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18,24&height=230&section=header&text=Hey%20there!%20%F0%9F%91%8B&fontSize=58&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=I%20am%20DHANRAJ VITTALA%20%7C%20Professional%20Bug%20Maker&descAlignY=60&descSize=20" width="100%" />
 
 <img src="https://readme-typing-svg.demolab.com?font=Fredoka&weight=700&size=26&duration=2500&pause=700&color=FF4FD8&center=true&vCenter=true&repeat=true&width=650&height=50&lines=%E2%98%95+Coffee+in%2C+code+out;%F0%9F%90%9B+99+bugs+in+the+code...+take+one+down!;%F0%9F%9A%80+Building+fun+stuff+daily;%F0%9F%8E%AE+Press+START+to+explore+my+profile" />
 
