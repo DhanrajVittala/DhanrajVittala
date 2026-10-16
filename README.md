@@ -30,6 +30,12 @@ This profile now has a separate **animated frontend portfolio** with a moving ne
 
 <div align="center">
 
+## 🐍 Contribution matrix — in motion
+
+<img width="100%" src="https://raw.githubusercontent.com/DhanrajVittala/DhanrajVittala/output/github-snake.svg" alt="Animated GitHub contribution snake"/>
+
+<img width="100%" src="https://raw.githubusercontent.com/DhanrajVittala/DhanrajVittala/output/github-snake.gif" alt="Neon contribution snake GIF"/>
+
 <img src="https://komarev.com/ghpvc/?username=DhanrajVittala&style=for-the-badge&color=7c3aed&label=PROFILE+VISITS" alt="Profile visits"/>
 
 <sub>Note: GitHub README pages do not run custom CSS or JavaScript animations. The full motion design lives in the linked website. The first Pages deployment may need GitHub Pages enabled in repository Settings → Pages → Build and deployment → Source: GitHub Actions.</sub>
