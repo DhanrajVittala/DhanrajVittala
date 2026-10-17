@@ -41,3 +41,15 @@ test('report explorer filters sample test rows', async ({ page }) => {
   await expect(page.locator('#run-rows tr')).toHaveCount(1);
   await expect(page.locator('#run-rows')).toContainText('FAILED');
 });
+
+
+test('UNO arcade exposes all three game modes and starts a solo round', async ({ page }) => {
+  await page.goto('/uno.html');
+  await expect(page).toHaveTitle(/UNO Arcade/);
+  await expect(page.getByRole('button', { name: /Solo vs computers/ })).toBeVisible();
+  await expect(page.getByRole('button', { name: /Pass-and-play/ })).toBeVisible();
+  await expect(page.getByRole('button', { name: /Online with friends/ })).toBeVisible();
+  await page.getByRole('button', { name: '▶ START GAME' }).click();
+  await expect(page.locator('#game-panel')).toBeVisible();
+  await expect(page.locator('#hand .card-face')).toHaveCount(7);
+});
