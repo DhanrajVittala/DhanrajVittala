@@ -53,3 +53,13 @@ test('UNO arcade exposes all three game modes and starts a solo round', async ({
   await expect(page.locator('#game-panel')).toBeVisible();
   await expect(page.locator('#hand .card-face')).toHaveCount(7);
 });
+
+
+test('UNO arcade includes rule help, move history, and victory overlay', async ({ page }) => {
+  await page.goto('/uno.html');
+  await expect(page.getByRole('heading', { name: 'How to play' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '📜 MOVE HISTORY' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '❔ QUICK RULES' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'COPY ROOM CODE' })).toBeVisible();
+  await expect(page.locator('#winner-overlay')).toHaveClass(/hidden/);
+});
