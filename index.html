@@ -62,6 +62,130 @@ html,body{max-width:100%;overflow-x:clip}.wrap,.hero,.section,.grid,.card{min-wi
 @media(max-width:600px){.hero{min-height:auto;padding:120px 0 85px}.hero h1{font-size:clamp(48px,14vw,76px)}.hero-console{padding:14px;margin-top:22px}.section{padding:58px 0}}
 @media(prefers-reduced-motion:reduce){.hero-console{animation:none}*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
+
+/* LIQUID GLASS UI — translucent surfaces, refractive highlights, and soft specular edges */
+:root{
+ --glass-fill:rgba(255,255,255,.055);
+ --glass-fill-strong:rgba(255,255,255,.095);
+ --glass-edge:rgba(255,255,255,.17);
+ --glass-shine:rgba(255,255,255,.32);
+ --glass-shadow:0 18px 60px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.12);
+}
+body:before{
+ background:radial-gradient(ellipse at 12% 8%,#3448a955 0,transparent 34%),
+ radial-gradient(ellipse at 87% 30%,#a43cbd38 0,transparent 33%),
+ radial-gradient(ellipse at 55% 95%,#0b9fb43b 0,transparent 40%),
+ radial-gradient(ellipse at 45% 45%,#121a3b 0,transparent 65%);
+}
+.nav{
+ background:linear-gradient(135deg,rgba(255,255,255,.13),rgba(255,255,255,.035) 48%,rgba(89,244,255,.055)) !important;
+ border:1px solid var(--glass-edge);
+ box-shadow:var(--glass-shadow),0 0 32px rgba(89,244,255,.055);
+ backdrop-filter:blur(28px) saturate(165%);
+ -webkit-backdrop-filter:blur(28px) saturate(165%);
+}
+.card,.hero-console,.stat,.tech,.contact-details>a,.contact-location,.contribution-frame,.iconbtn,.repo-search,.btn,.pill{
+ background-color:var(--glass-fill);
+ background-image:linear-gradient(135deg,rgba(255,255,255,.105),rgba(255,255,255,.018) 52%,rgba(167,139,250,.045));
+ border-color:rgba(255,255,255,.14);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(0,0,0,.08);
+ backdrop-filter:blur(22px) saturate(155%);
+ -webkit-backdrop-filter:blur(22px) saturate(155%);
+}
+.card{
+ isolation:isolate;
+ border-radius:24px;
+}
+.card:after{
+ content:"";
+ position:absolute;
+ inset:0;
+ border-radius:inherit;
+ pointer-events:none;
+ background:linear-gradient(125deg,rgba(255,255,255,.19),transparent 24%,transparent 72%,rgba(89,244,255,.065));
+ opacity:.55;
+ mask:linear-gradient(#000,transparent 72%);
+ z-index:0;
+}
+.card>*{z-index:1}
+.card:hover,.hero-console:hover,.contact-details>a:hover{
+ border-color:rgba(89,244,255,.48);
+ box-shadow:0 22px 65px rgba(0,0,0,.3),0 0 32px rgba(89,244,255,.09),inset 0 1px 0 rgba(255,255,255,.24);
+}
+.hero-console{
+ background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.035) 54%,rgba(167,139,250,.09));
+ border-color:rgba(255,255,255,.22);
+ box-shadow:0 25px 80px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.2),0 0 45px rgba(89,244,255,.08);
+ backdrop-filter:blur(30px) saturate(175%);
+ -webkit-backdrop-filter:blur(30px) saturate(175%);
+}
+.btn,.iconbtn,.console-run{
+ border-color:rgba(255,255,255,.2);
+ transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease,background .28s ease;
+}
+.btn.primary{
+ background:linear-gradient(125deg,rgba(89,244,255,.23),rgba(99,102,241,.3) 48%,rgba(255,114,210,.2));
+ border:1px solid rgba(255,255,255,.25);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.26),0 10px 32px rgba(70,80,220,.15);
+}
+.btn:not(.primary):hover,.iconbtn:hover,.console-run:hover{
+ background:linear-gradient(135deg,rgba(255,255,255,.15),rgba(89,244,255,.09));
+}
+.pill{
+ border-radius:999px;
+ padding:8px 12px;
+}
+.tech{
+ border-radius:18px;
+ position:relative;
+ overflow:hidden;
+}
+.tech:before{
+ content:"";
+ position:absolute;
+ inset:-70% 35% 20% -35%;
+ transform:rotate(28deg);
+ background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);
+ transition:transform .5s ease;
+ pointer-events:none;
+}
+.tech:hover:before{transform:translateX(160%) rotate(28deg)}
+.stat{
+ border-radius:20px;
+ background-image:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.025));
+}
+.contact{
+ background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025) 60%,rgba(167,139,250,.07));
+ border-color:rgba(255,255,255,.18);
+ box-shadow:0 28px 90px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.18);
+ backdrop-filter:blur(26px) saturate(155%);
+ -webkit-backdrop-filter:blur(26px) saturate(155%);
+}
+.marquee{background:linear-gradient(90deg,rgba(255,255,255,.025),rgba(255,255,255,.07),rgba(255,255,255,.025));backdrop-filter:blur(16px)}
+body.light{
+ --glass-fill:rgba(255,255,255,.58);
+ --glass-fill-strong:rgba(255,255,255,.78);
+ --glass-edge:rgba(255,255,255,.8);
+ --glass-shadow:0 18px 55px rgba(53,65,120,.1),inset 0 1px 0 rgba(255,255,255,.9);
+}
+body.light .nav,body.light .card,body.light .hero-console,body.light .stat,body.light .tech,
+body.light .contact-details>a,body.light .contact-location,body.light .contact,body.light .btn,
+body.light .iconbtn,body.light .repo-search,body.light .pill{
+ background-color:rgba(255,255,255,.52);
+ background-image:linear-gradient(135deg,rgba(255,255,255,.88),rgba(255,255,255,.4) 60%,rgba(199,211,255,.24));
+ border-color:rgba(91,102,165,.2);
+ box-shadow:0 16px 42px rgba(55,68,130,.08),inset 0 1px 0 rgba(255,255,255,.95);
+}
+body.light .contribution-frame{background:rgba(255,255,255,.65)}
+@supports not ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){
+ .nav,.card,.hero-console,.stat,.tech,.contact,.contact-details>a,.contact-location,.btn,.iconbtn,.repo-search,.pill{background-color:rgba(18,22,48,.94)}
+}
+@media(max-width:600px){
+ .card,.hero-console,.contact{border-radius:19px}
+ .nav{backdrop-filter:blur(20px) saturate(145%);-webkit-backdrop-filter:blur(20px) saturate(145%)}
+}
+@media(prefers-reduced-motion:reduce){.tech:before{display:none}}
+
 </style>
 </head>
 <body>
