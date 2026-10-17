@@ -63,3 +63,14 @@ test('UNO arcade includes rule help, move history, and victory overlay', async (
   await expect(page.getByRole('button', { name: 'COPY ROOM CODE' })).toBeVisible();
   await expect(page.locator('#winner-overlay')).toHaveClass(/hidden/);
 });
+
+
+test('live QA CI dashboard renders status metrics and workflow filters', async ({ page }) => {
+  await page.goto('/ci-dashboard.html');
+  await expect(page).toHaveTitle(/Live QA CI Dashboard/);
+  await expect(page.getByRole('heading', { name: /Workflow snapshot/ })).toBeVisible();
+  await expect(page.getByRole('button', { name: /REFRESH DATA/ })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'SUCCESS' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'FAILED' })).toBeVisible();
+  await expect(page.getByRole('link', { name: /OPEN GITHUB ACTIONS/ })).toHaveAttribute('href', 'https://github.com/DhanrajVittala/DhanrajVittala/actions');
+});
