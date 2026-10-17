@@ -4,7 +4,7 @@ test('portfolio title and primary navigation render', async ({ page }) => {
   await page.goto('/');
   await expect(page).toHaveTitle(/QA Engineer Portfolio/);
   await expect(page.locator('nav.nav')).toBeVisible();
-  await expect(page.locator('nav.navlinks a[href="automation.html"]')).toHaveAttribute('href', 'automation.html');
+  await expect(page.locator('.navlinks a[href="automation.html"]')).toHaveAttribute('href', 'automation.html');
 });
 
 test('portfolio links to the interactive QA lab', async ({ page }) => {
