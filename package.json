@@ -1,0 +1,13 @@
+{
+  "name": "dhanraj-qa-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright browser checks for the Dhanraj QA portfolio",
+  "scripts": {
+    "test": "playwright test",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}
