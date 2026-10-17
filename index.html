@@ -40,6 +40,28 @@ body.light .stat{background:#ffffffaa}
 /* Prevent the decorative hero elements and fixed chrome from widening mobile pages. */
 html,body{max-width:100%;overflow-x:clip}.wrap,.hero,.section,.grid,.card{min-width:0;max-width:100%}.navlinks{min-width:0;flex-wrap:wrap}.contact-details>*{min-width:0}
 @media(max-width:440px){.nav{width:calc(100% - 20px);padding:12px}.wrap{width:calc(100% - 24px)}.navlinks{column-gap:8px;row-gap:8px}.orb.one{right:-55%;max-width:100vw}.orb.two{right:-20%;max-width:100vw}}
+
+/* Visual polish: layered hero preview and more deliberate card interactions. */
+.hero{min-height:780px}
+.hero-console{position:absolute;right:1%;top:31%;width:min(310px,29%);padding:17px;border:1px solid #59f4ff42;border-radius:18px;background:linear-gradient(145deg,#11172ddd,#090b1de8);box-shadow:0 20px 70px #0005,0 0 45px #59f4ff0b;backdrop-filter:blur(14px);transform:rotate(2deg);animation:consoleFloat 7s ease-in-out infinite}
+.console-top{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-bottom:12px;border-bottom:1px solid #ffffff16;font:10px 'DM Mono',monospace;color:var(--muted)}
+.console-lights{display:flex;gap:5px}.console-lights i{width:7px;height:7px;border-radius:50%;background:var(--pink)}.console-lights i:nth-child(2){background:#ffd166}.console-lights i:nth-child(3){background:var(--green)}
+.console-title{margin:15px 0 12px;font-size:15px;font-weight:700}.console-title span{color:var(--cyan)}
+.console-check{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #ffffff0b;font:10px 'DM Mono',monospace;color:var(--muted)}
+.console-check b{font-weight:500;color:var(--green)}.console-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:14px}
+.console-bottom small{font:9px 'DM Mono',monospace;color:var(--muted)}
+.console-run{border:1px solid #59f4ff66;border-radius:9px;padding:8px 10px;background:#59f4ff0c;color:var(--cyan);font:9px 'DM Mono',monospace;cursor:pointer}
+.console-run:hover{background:#59f4ff18;box-shadow:0 0 20px #59f4ff18}
+.console-run:focus-visible,.btn:focus-visible,.iconbtn:focus-visible,a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+@keyframes consoleFloat{0%,100%{transform:translateY(0) rotate(2deg)}50%{transform:translateY(-9px) rotate(0deg)}}
+.card:hover{border-color:#59f4ff70;box-shadow:0 18px 48px #0004,0 0 28px #59f4ff0d}
+.tech{border:1px solid transparent;border-radius:12px;transition:transform .25s,border-color .25s,background .25s}
+.tech:hover{transform:translateY(-4px);border-color:#59f4ff45;background:#59f4ff08}
+.sectionhead h2{text-wrap:balance}
+@media(max-width:900px){.hero{min-height:760px}.hero-console{position:relative;right:auto;top:auto;width:min(100%,440px);margin:28px 0 0;transform:none;animation:none}}
+@media(max-width:600px){.hero{min-height:auto;padding:120px 0 85px}.hero h1{font-size:clamp(48px,14vw,76px)}.hero-console{padding:14px;margin-top:22px}.section{padding:58px 0}}
+@media(prefers-reduced-motion:reduce){.hero-console{animation:none}*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
 </style>
 </head>
 <body>
@@ -50,7 +72,17 @@ html,body{max-width:100%;overflow-x:clip}.wrap,.hero,.section,.grid,.card{min-wi
 <h1>Hey, I'm<br><span class="gradient">Dhanraj.</span></h1>
 <p>I’m a QA Engineer focused on reliable releases, detailed testing, and finding issues before users do. <span class="typing" id="typed">QA Engineer</span></p>
 <div class="actions"><a class="btn primary" href="https://github.com/DhanrajVittala">↗ EXPLORE MY GITHUB</a><a class="btn" href="#projects">↓ ENTER THE LAB</a><a class="btn" href="resume.html">▤ VIEW RESUME</a><a class="btn" href="qa-lab.html">🧪 OPEN INTERACTIVE QA LAB</a><a class="btn" href="automation.html">🎭 PLAYWRIGHT & CI</a><a class="btn" href="ci-dashboard.html">📡 LIVE QA CI DASHBOARD</a><a class="btn" href="uno.html">🃏 PLAY UNO WITH FRIENDS</a><a class="btn" href="https://github.com/DhanrajVittala?tab=repositories">⌘ REPOSITORIES</a></div>
-<div class="scroll">SCROLL TO EXPLORE ↓</div>
+<aside class="hero-console" aria-label="Illustrative QA smoke test preview">
+<div class="console-top"><span>QA / SMOKE SUITE</span><span class="console-lights" aria-hidden="true"><i></i><i></i><i></i></span></div>
+<div class="console-title">Release <span>health</span> / preview</div>
+<div class="console-check"><span>Login flow</span><b>✓ PASS</b></div>
+<div class="console-check"><span>API response</span><b>✓ PASS</b></div>
+<div class="console-check"><span>Data validation</span><b>✓ PASS</b></div>
+<div class="console-check"><span>Regression gate</span><b>✓ PASS</b></div>
+<div class="console-bottom"><small>ILLUSTRATIVE UI · NOT LIVE RESULTS</small><a class="console-run" href="qa-lab.html">OPEN QA LAB ↗</a></div>
+</aside>
+
+ <div class="scroll">SCROLL TO EXPLORE ↓</div>
 </header>
 <div class="marquee"><div class="marqueeinner"><span>✳ SYSTEMS THINKING</span> · DEBUG WITH INTENT · <span>✳ BUILD WITH CURIOSITY</span> · LEARN EVERY DAY · <span>✳ SHIP SMALL IMPROVEMENTS</span> · STAY CURIOUS · <span>✳ SYSTEMS THINKING</span> · DEBUG WITH INTENT · <span>✳ BUILD WITH CURIOSITY</span> · LEARN EVERY DAY · <span>✳ SHIP SMALL IMPROVEMENTS</span> · STAY CURIOUS ·</div></div>
 <main class="wrap">
