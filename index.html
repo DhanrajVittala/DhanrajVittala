@@ -186,10 +186,93 @@ body.light .contribution-frame{background:rgba(255,255,255,.65)}
 }
 @media(prefers-reduced-motion:reduce){.tech:before{display:none}}
 
+
+/* Mobile-first usability pass */
+.menu-toggle{display:none;white-space:nowrap;min-height:42px;align-items:center;justify-content:center;touch-action:manipulation}
+html{scroll-padding-top:90px}
+button,a,input{touch-action:manipulation}
+img{max-width:100%}
+@media(max-width:760px){
+ .nav{width:calc(100% - 20px);margin:10px auto -70px;padding:10px 12px;gap:8px;flex-wrap:wrap;align-items:center;border-radius:16px}
+ .brand{font-size:13px;white-space:nowrap}
+ .menu-toggle{display:inline-flex;margin-left:auto}
+ .navtools{gap:5px;order:2}
+ .navtools .live-clock{display:none}
+ .navtools .iconbtn{font-size:10px;padding:9px 10px;min-height:40px}
+ .navlinks{display:none;order:3;flex:0 0 100%;width:100%;min-width:0;padding:10px 2px 3px;gap:7px;grid-template-columns:repeat(2,minmax(0,1fr));font-size:11px}
+ .navlinks.is-open{display:grid}
+ .navlinks a{display:flex!important;align-items:center;min-height:42px;padding:11px 12px;border:1px solid rgba(255,255,255,.13);border-radius:11px;background:rgba(255,255,255,.045);overflow-wrap:anywhere}
+ .navlinks a:hover,.navlinks a:focus-visible{background:rgba(89,244,255,.1);border-color:var(--cyan)}
+ .wrap{width:calc(100% - 28px)}
+ .hero{min-height:0;padding:125px 0 70px;gap:0}
+ .hero h1{font-size:clamp(48px,12vw,78px);line-height:.96;overflow-wrap:anywhere;margin:22px 0 16px}
+ .hero p{font-size:16px;line-height:1.65;max-width:100%}
+ .eyebrow{font-size:10px;letter-spacing:.08em;flex-wrap:wrap}
+ .actions{gap:9px;margin-top:22px}
+ .btn{min-height:44px;justify-content:center;padding:12px 14px;font-size:11px;max-width:100%;overflow-wrap:anywhere}
+ .hero .actions .btn{flex:1 1 calc(50% - 9px)}
+ .hero-console{width:100%;max-width:100%;margin-top:22px;min-width:0}
+ .orb.one{width:250px;height:250px;right:-40%;top:30%}
+ .orb.two{width:170px;height:170px;right:-15%;top:42%}
+ .orb.three{right:5%}
+ .scroll{bottom:20px;font-size:9px}
+ .section{padding:54px 0}
+ .sectionhead{display:block;margin-bottom:22px}
+ .section h2{font-size:clamp(29px,8vw,42px);line-height:1.08}
+ .sectionhead p{font-size:13px;line-height:1.65;margin:12px 0 0}
+ .grid{grid-template-columns:minmax(0,1fr);gap:12px}
+ .about,.status,.wide,.half,.third{grid-column:1/-1;min-width:0}
+ .card{padding:19px;border-radius:19px;min-width:0}
+ .card h3{font-size:20px;overflow-wrap:anywhere}
+ .card p{font-size:13px;overflow-wrap:anywhere}
+ .techgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+ .tech{padding:15px 5px;min-width:0;overflow-wrap:anywhere}
+ .tech .emoji{font-size:22px}
+ .tech span:last-child{font-size:9px;line-height:1.4}
+ .statgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+ .stat{padding:16px 5px;min-width:0}
+ .stat strong{font-size:clamp(17px,5vw,24px)}
+ .stat span{font-size:8px;line-height:1.45;overflow-wrap:anywhere}
+ .repo-tools{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+ .repo-search{width:100%;min-width:0;font-size:12px}
+ #repo-refresh{min-width:44px}
+ .repo{min-height:0}
+ .repo .repofoot{margin-top:20px}
+ .contribution-frame img{min-width:680px}
+ .contact{padding:35px 16px}
+ .contact h2{font-size:clamp(34px,10vw,54px)}
+ .contact-details{grid-template-columns:minmax(0,1fr);gap:8px}
+ .contact-details>a,.contact-location{padding:12px}
+ .contact-details b{font-size:11px}
+ .step{grid-template-columns:32px minmax(0,1fr);gap:10px}
+ .stepnum{width:30px;height:30px}
+ .footer{display:flex;flex-direction:column;gap:8px;line-height:1.8;padding-bottom:28px}
+ #backtop{right:12px;bottom:12px;width:44px;height:44px}
+}
+@media(max-width:390px){
+ .brand{font-size:12px}
+ .menu-toggle{font-size:10px;padding:8px}
+ .nav{gap:6px}
+ .navtools .iconbtn{padding:8px}
+ .hero .actions .btn{flex-basis:100%}
+ .techgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .statgrid{grid-template-columns:1fr}
+ .stat{display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;padding:12px 14px}
+ .stat strong{font-size:21px}
+ .stat span{max-width:65%;text-align:right}
+ .repo-tools{grid-template-columns:minmax(0,1fr)}
+ .repo-tools #repo-refresh{width:100%}
+}
+@media(hover:none){
+ .card:hover,.tech:hover,.btn:hover{transform:none}
+ .card:hover{box-shadow:var(--glass-shadow)}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
 </style>
 </head>
 <body>
-<div id="scroll-progress" aria-hidden="true"></div><nav class="nav"><a class="brand" href="#"><span>DP</span> / QA ENGINEER</a><div class="navlinks"><a href="#about">ABOUT</a><a href="#stack">STACK</a><a href="#activity">ACTIVITY</a><a href="#projects">PROJECTS</a><a href="qa-lab.html">QA LAB ↗</a><a href="automation.html">PLAYWRIGHT ↗</a><a href="ci-dashboard.html">LIVE CI ↗</a><a href="uno.html">FUN ZONE 🃏</a><a href="resume.html">RESUME</a></div><div class="navtools"><span class="live-clock" id="live-clock">LOCAL TIME</span><button class="iconbtn" id="theme-toggle" type="button" aria-label="Toggle light and dark theme">☼ THEME</button></div></nav>
+<div id="scroll-progress" aria-hidden="true"></div><nav class="nav"><a class="brand" href="#"><span>DP</span> / QA ENGINEER</a><button class="iconbtn menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">☰ MENU</button><div class="navlinks" id="primary-nav"><a href="#about">ABOUT</a><a href="#stack">STACK</a><a href="#activity">ACTIVITY</a><a href="#projects">PROJECTS</a><a href="qa-lab.html">QA LAB ↗</a><a href="automation.html">PLAYWRIGHT ↗</a><a href="ci-dashboard.html">LIVE CI ↗</a><a href="uno.html">FUN ZONE 🃏</a><a href="resume.html">RESUME</a></div><div class="navtools"><span class="live-clock" id="live-clock">LOCAL TIME</span><button class="iconbtn" id="theme-toggle" type="button" aria-label="Toggle light and dark theme">☼ THEME</button></div></nav>
 <header class="hero wrap">
 <div class="orb one"></div><div class="orb two"></div><div class="orb three"></div>
 <div class="eyebrow"><i class="dot"></i> QUALITY CHECKS ACTIVE · QA.PORTFOLIO</div>
@@ -253,6 +336,33 @@ const target=document.getElementById('typed');
 function type(){if(!target)return;const w=words[wi];target.textContent=w.slice(0,ci);if(!del){ci++;if(ci>w.length){del=true;setTimeout(type,1100);return}}else{ci--;if(ci<0){ci=0;del=false;wi=(wi+1)%words.length}}setTimeout(type,del?36:72)}
 type();
 document.getElementById('year').textContent=new Date().getFullYear();
+
+
+const menuToggle=document.getElementById('menu-toggle');
+const primaryNav=document.getElementById('primary-nav');
+if(menuToggle&&primaryNav){
+ menuToggle.addEventListener('click',()=>{
+  const open=primaryNav.classList.toggle('is-open');
+  menuToggle.setAttribute('aria-expanded',String(open));
+  menuToggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+  menuToggle.textContent=open?'✕ CLOSE':'☰ MENU';
+ });
+ primaryNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+  if(matchMedia('(max-width: 760px)').matches){
+   primaryNav.classList.remove('is-open');
+   menuToggle.setAttribute('aria-expanded','false');
+   menuToggle.setAttribute('aria-label','Open navigation menu');
+   menuToggle.textContent='☰ MENU';
+  }
+ }));
+ addEventListener('resize',()=>{
+  if(!matchMedia('(max-width: 760px)').matches){
+   primaryNav.classList.remove('is-open');
+   menuToggle.setAttribute('aria-expanded','false');
+   menuToggle.textContent='☰ MENU';
+  }
+ });
+}
 
 const body=document.body,themeBtn=document.getElementById('theme-toggle');
 themeBtn.addEventListener('click',()=>{const light=body.classList.toggle('light');themeBtn.textContent=light?'☾ DARK':'☼ LIGHT';themeBtn.setAttribute('aria-pressed',String(light));});
