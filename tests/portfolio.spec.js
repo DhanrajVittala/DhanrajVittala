@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 test('portfolio title and primary navigation render', async ({ page }) => {
   await page.goto('/');
   await expect(page).toHaveTitle(/QA Engineer Portfolio/);
-  await expect(page.getByRole('navigation')).toBeVisible();
+  await expect(page.locator('nav.nav')).toBeVisible();
   await expect(page.getByRole('link', { name: /PLAYWRIGHT/ })).toHaveAttribute('href', 'automation.html');
 });
 
@@ -23,7 +23,7 @@ test('automation showcase page displays report explorer', async ({ page }) => {
 
 test('resume page is available from the portfolio', async ({ page }) => {
   await page.goto('/');
-  await expect(page.getByRole('link', { name: 'RESUME' })).toHaveAttribute('href', 'resume.html');
+  await expect(page.getByRole('link', { name: /RESUME/ }).first()).toHaveAttribute('href', 'resume.html');
   const response = await page.request.get('/resume.html');
   expect(response.ok()).toBeTruthy();
 });
