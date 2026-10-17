@@ -71,13 +71,13 @@
 const $=id=>document.getElementById(id);
 const colors=['red','yellow','green','blue'];
 const colorNames={red:'Red',yellow:'Yellow',green:'Green',blue:'Blue'};
-let mode='ai',game=null,peer=null,connections=[],hostConn=null,isHost=false,roomId='',onlinePlayers=[],pendingWild=null,toastTimer=null;
+let mode='ai',game=null,peer=null,connections=[],hostConn=null,isHost=false,roomId='',onlinePlayers=[],pendingWild=null,toastTimer=null,lastWinnerId=null;
 const modeButtons=[...document.querySelectorAll('.mode')];
 function say(text){$('connection-status').textContent=text}
 function logMove(text){if(!game)return;game.history=game.history||[];game.history.unshift({text:String(text),time:new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})});game.history=game.history.slice(0,30);renderHistory()}
 function renderHistory(){const list=$('move-history');if(!list)return;const items=game&&game.history||[];list.innerHTML=items.length?items.map(x=>'<li><span>'+escapeHtml(x.time)+'</span> · '+escapeHtml(x.text)+'</li>').join(''):'<li>No moves yet. Start a round to begin.</li>'}
 async function copyRoomCode(){const code=roomId||$('room-code').value.trim();if(!code){toast('Host a room or enter a room code first.');return}try{await navigator.clipboard.writeText(code);toast('Room code copied! Share it with your friends.')}catch(e){$('room-code').focus();$('room-code').select();try{document.execCommand('copy');toast('Room code copied!')}catch(err){toast('Copy unavailable — select and copy the code manually.')}}}
-function showWinner(){if(!game||!game.winner)return;$('winner-title').textContent=game.winner.name+' wins!';$('winner-summary').textContent='The round is complete. Start another round when you are ready.';$('winner-overlay').classList.remove('hidden');celebrate()}
+function showWinner(){if(!game||!game.winner)return;$('winner-title').textContent=game.winner.name+' wins!';$('winner-summary').textContent='The round is complete. Start another round when you are ready.';$('winner-overlay').classList.remove('hidden');if(lastWinnerId!==game.winner.id){lastWinnerId=game.winner.id;celebrate()}}
 function celebrate(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;for(let i=0;i<64;i++){const el=document.createElement('i');el.className='confetti-piece';el.style.left=Math.random()*100+'vw';el.style.background=['#5df4ff','#ff70d2','#7dffb8','#ffd84d','#438cff'][i%5];el.style.animationDelay=Math.random()*.7+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),3400)}}
 function message(text){$('game-message').textContent=text}
 function toast(text){const el=$('toast');el.textContent=text;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2600)}
