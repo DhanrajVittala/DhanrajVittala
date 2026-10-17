@@ -7,6 +7,12 @@ test('portfolio title and primary navigation render', async ({ page }) => {
   await expect(page.locator('.navlinks a[href="automation.html"]')).toHaveAttribute('href', 'automation.html');
 });
 
+test('hero includes the QA preview and a path to the interactive lab', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.getByRole('complementary', { name: /Illustrative QA smoke test preview/ })).toBeVisible();
+  await expect(page.getByRole('link', { name: /OPEN QA LAB/ })).toHaveAttribute('href', 'qa-lab.html');
+});
+
 test('portfolio links to the interactive QA lab', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('link', { name: /OPEN INTERACTIVE QA LAB/ }).click();
